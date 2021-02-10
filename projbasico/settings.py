@@ -26,7 +26,7 @@ SECRET_KEY = 'tbih-2h_tv$9!j00pcmd!i=r4)s)eo6^-z23%u1(m-qxue2i)z'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['futebolcarioca.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
