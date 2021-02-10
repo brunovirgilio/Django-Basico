@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel='stylesheet' href='{% static "css/estilo.css" %}'>
+    <title>Futebol Carioca - Principais Titulos</title>
+</head>
+<body>
+    <section id='interface'>
+        <div id='rotulo'>
+            <img src="{% static 'imagens/foto-capa.jpg' %}"/>
+        </div>
+        <div id='dados'>
+            <h1>Futebol Carioca<br>Principais Titulos</h1>
+            <a href="{% url 'titulos' 1 %}"><img id='logo' src="{% static 'imagens/logo-botafogo.jpg' %}"/></a>
+            <a href="{% url 'titulos' 2 %}"><img id='logo' src="{% static 'imagens/logo-flamengo.png' %}"/></a>
+            <a href="{% url 'titulos' 3 %}"><img id='logo' src="{% static 'imagens/logo-fluminense.png' %}"/></a>
+            <a href="{% url 'titulos' 4 %}"><img id='logo' src="{% static 'imagens/logo-VASCO.png' %}"/></a>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href='{% static "css/estilo.css" %}'/>
+    <title>Futebol Carioca - Principais Titulos</title>
+</head>
+<body>
+    <section id='interface-titulos'>
+        <div id='torneio'>
+            <h3><img id='taca' src='{% static "imagens/logo-carioca.png" %}'/>{{ titulo.carioca }}&nbsp;<img id='taca' src='{% static "imagens/logo-brasileiro.jpg" %}'/> {{ titulo.brasileiro }}&nbsp;<img id='taca' src='{% static "imagens/logo-copabrasil.png" %}'/> {{ titulo.copadobrasil }}</h3>
+            <h3><img id='taca' src='{% static "imagens/logo-sulamericana.png" %}'/> {{ titulo.sulamericana }}&nbsp;&nbsp;<img id='taca' src='{% static "imagens/logo-libertadores.png" %}'/> {{ titulo.libertadores }}&nbsp;<img id='taca' src='{% static "imagens/logo-mundial.png" %}'/> {{ titulo.mundial }}</h3>
+        </div>
+        {% block torcida %}
+        <div>
+            <img id='foto-torcida' src='{{ titulo.imagem.url }}'/>
+        </div>
+        {% endblock torcida %}
+        <div id='botao'>
+            <a href="{% url 'index' %}">Voltar</a>
+        </div>
+    </section>     
+</body>
+</html>

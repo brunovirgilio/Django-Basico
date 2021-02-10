@@ -1,0 +1,81 @@
+#interface{
+    margin:auto ;
+    width: 900px;
+    height: 400px;
+    border: 1px solid black;
+}
+
+#interface-titulos{
+    margin:auto ;
+    width: 900px;
+    height: 400px;
+    border: 1px solid black;
+}
+
+#botao{
+    width: 60px;
+    margin:10px;
+    padding: 0px;
+    border: 1px solid black;
+    text-align: center;
+    background-color: black;
+}
+
+#interface-titulos a{
+    text-decoration:none;
+    color: white;
+}
+
+
+#rotulo{
+    width: 70%;
+    border: 0px;
+    padding: 0px;
+}
+
+#rotulo img{
+    width: 630px;
+    height: 400px;
+    border: 0px;
+    padding: 0px;
+}
+
+#dados{
+    text-align: center;
+    position: relative;
+    top: -400px;
+    width: 30%;
+    padding: 0px;
+    float:right;
+}
+#dados h1{
+    text-align: center;
+}
+
+#logo{
+    width: 150px;
+    height: auto;
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+}
+
+#taca{
+    width: 70px;
+    height: auto;
+    border:0px;
+    padding: 0px;
+    margin: 0px;
+}
+#torneio {
+    margin-left: 100px;
+    margin-top: 100px;
+}
+
+#foto-torcida{
+    position: relative;
+    top: -301px;
+    float: right;
+    height: 400px;
+    width: 400px;
+}
