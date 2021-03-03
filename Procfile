@@ -1,1 +1,1 @@
-web: gunicorn projbasico.wsgi --log-file -
+web: gunicorn Django-Basico.wsgi --log-file -
