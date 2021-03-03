@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'tbih-2h_tv$9!j00pcmd!i=r4)s)eo6^-z23%u1(m-qxue2i)z'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -50,7 +50,12 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+<<<<<<< HEAD
     ]
+=======
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+]
+>>>>>>> parent of 140cae6 (retornamos ao inicio)
 
 ROOT_URLCONF = 'projbasico.urls'
 
