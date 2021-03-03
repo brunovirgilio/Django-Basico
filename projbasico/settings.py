@@ -50,12 +50,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-<<<<<<< HEAD
     ]
-=======
-    'whitenoise.middleware.WhiteNoiseMiddleware',
-]
->>>>>>> parent of 140cae6 (retornamos ao inicio)
 
 ROOT_URLCONF = 'projbasico.urls'
 
