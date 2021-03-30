@@ -1,9 +1,0 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-python-3.8.5
-=======
-python -3.8.7
->>>>>>> parent of 140cae6 (retornamos ao inicio)
-=======
-python -3.8.7
->>>>>>> parent of 140cae6 (retornamos ao inicio)
