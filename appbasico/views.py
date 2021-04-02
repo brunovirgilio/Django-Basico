@@ -18,5 +18,3 @@ def titulos(request,pk):
     }
     return render(request, 'titulos.html', context)
 
-def postagem (request):
-	    return render(request, 'postagem.html')
