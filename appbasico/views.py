@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Equipe
+from .models import Equipe, Postagem
 
 from django.http import HttpResponse
 from django.template import loader
@@ -20,17 +20,12 @@ def titulos(request,pk):
     }
     return render(request, 'titulos.html', context)
 
-def postagem (request):
-	    return render(request, 'postagem.html')
-
 def postagem(request):
-		if str(request.method) == 'POST': 
+		if str(request.method) == 'POST':
 			form = PostagemModelForm(request.POST, request.FILES)
 			if form.is_valid():
-				post = form.save(commit=False)
-
-				print(f'Nome: {post.nome}')
-				print(f'Postagem: {post.post}')
+				
+				form.save()
 
 				messages.success(request, 'Postagem salva com sucesso.')
 				form = PostagemModelForm()
@@ -41,5 +36,9 @@ def postagem(request):
 		context = {
 			'form': form
 		}
+		context = {
+			'postagem': Postagem.objects.all()
+		}
 		return render(request, 'postagem.html', context)
+
 
