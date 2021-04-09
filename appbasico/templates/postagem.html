@@ -1,5 +1,4 @@
 {% load bootstrap4 %}
-{% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -15,16 +14,12 @@
 
         <form action="{% url 'postagem' %}" method="post" class="form" autocomplete="off" enctype="multipart/form-data">
             {% csrf_token %}
-
             {% bootstrap_form form %}
+            
             {% buttons %}
                 <button type="submit" class="btn btn-primary">comentar</button>
             {% endbuttons %}
         </form>
-    </div>
-    <div id='comentario'>
-        {% postagem.nome %}
-        {% postagem.post %}    
     </div>
 {% bootstrap_javascript jquery='full' %}
 </body>

@@ -36,9 +36,6 @@ def postagem(request):
 		context = {
 			'form': form
 		}
-		context = {
-			'postagem': Postagem.objects.all()
-		}
 		return render(request, 'postagem.html', context)
 
 

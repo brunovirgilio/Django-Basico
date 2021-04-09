@@ -2,9 +2,9 @@ from django.contrib import admin
 
 from .models import Equipe
 
-admin.site.register(Equipe)
-
 from .models import Postagem
+
+admin.site.register(Equipe)
 
 @admin.register(Postagem)
 class PostagemAdmin(admin.ModelAdmin):
