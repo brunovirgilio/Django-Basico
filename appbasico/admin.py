@@ -8,4 +8,4 @@ admin.site.register(Equipe)
 
 @admin.register(Postagem)
 class PostagemAdmin(admin.ModelAdmin):
-    list_display = ('nome', 'post', 'slug')
+    list_display = ('nome', 'post','criado','modificado','ativo')

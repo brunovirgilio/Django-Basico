@@ -20,22 +20,16 @@ class Equipe(models.Model):
         return self.nome
 
 class Base(models.Model):
-    criado = models.DateField('Data de Criação', auto_now_add=True)
+    criado     = models.DateField('Data de Criação', auto_now_add=True)
     modificado = models.DateField('Data de Atualização', auto_now=True)
-    ativo = models.BooleanField('Ativo7', default=True)
+    ativo      = models.BooleanField('Ativo7', default=True)
 
     class Meta:
         abstract = True
 
 class Postagem(Base):
-    nome = models.CharField(max_length=100)	
-    post = models.CharField(max_length=140)
-    slug = models.SlugField('Slug', max_length=100, blank=True, editable=False)
+    nome = models.CharField(max_length=100, default="")	
+    post = models.CharField(max_length=140, default="")
 	
     def __str__(self):
         return self.nome
-	
-def postagem_pre_save(signal, instance, sender, **kwargs):
-    instance.slug =slugify(instance.nome)
-
-signals.pre_save.connect(postagem_pre_save, sender=Postagem)
