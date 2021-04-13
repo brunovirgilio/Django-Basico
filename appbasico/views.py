@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.contrib import messages
 from .models import Equipe, Postagem
 
 from django.http import HttpResponse
@@ -22,7 +23,7 @@ def titulos(request,pk):
 
 def postagem(request):
 		if str(request.method) == 'POST':
-			form = PostagemModelForm(request.POST, request.FILES)
+			form = PostagemModelForm(request.POST)
 			if form.is_valid():
 				
 				form.save()
