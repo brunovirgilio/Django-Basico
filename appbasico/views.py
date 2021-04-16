@@ -44,7 +44,7 @@ def postagem(request):
 	
 def exibepost (request):
 
-	verpost = Postagem.objects.all()
+	verpost = Postagem.objects.filter(nome='Bruno')
 	context={
 		'comentario': verpost,
 	}
