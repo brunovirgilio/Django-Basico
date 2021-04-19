@@ -28,8 +28,10 @@ class Base(models.Model):
         abstract = True
 
 class Postagem(Base):
+    time = models.CharField(max_length=140, default="")
     nome = models.CharField(max_length=100, default="")	
     post = models.CharField(max_length=140, default="")
+    
 	
     def __str__(self):
         return self.nome

@@ -43,9 +43,29 @@ def postagem(request):
 
 	
 def exibepost (request):
-
-	verpost = Postagem.objects.filter(nome='Bruno')
+	verpost = Postagem.objects.filter(time='Botafogo')
 	context={
 		'comentario': verpost,
 	}
 	return render(request, 'historias.html', context)
+
+def postfla (request):
+	verpost = Postagem.objects.filter(time='Flamengo')
+	context={
+		'comentario': verpost,
+	}
+	return render(request, 'historiasfla.html', context)
+
+def postflu (request):
+	verpost = Postagem.objects.filter(time='Fluminense')
+	context={
+		'comentario': verpost,
+	}
+	return render(request, 'historiasflu.html', context)
+
+def postvasco (request):
+	verpost = Postagem.objects.filter(time='Vasco')
+	context={
+		'comentario': verpost,
+	}
+	return render(request, 'historiasva.html', context)

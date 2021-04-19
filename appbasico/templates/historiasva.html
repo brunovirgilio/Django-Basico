@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Historias</title>
+</head>
+<body>
+    {% for x in comentario %}
+        <p>{{ x.nome }}</p>
+        <p>{{ x.post }}</p>
+    {% endfor %}
+
+    <a href="{% url 'postagem' %}">Escreva sua historia</a>
+    <a href="{% url 'index' %}">Voltar</a>
+</body>
+</html>
