@@ -18,10 +18,19 @@
         </div>
         {% endblock torcida %}
         <div id='botao'>
-            <a href="{% url 'historiasfla' %}">Historias</a>
-                {% if request.get_full_path == "/titulos/1" %}
-                    <a href="{% url 'historias' %}">Historias</a>      
-                {% endif %}
+            {% if request.get_full_path == "/titulos/1" %}
+                <a href="{% url 'historias' %}">Historias</a>
+        
+            {% elif request.get_full_path == "/titulos/2"%}
+                <a href="{% url 'historiasfla' %}">Historias</a>
+                
+            {% elif request.get_full_path == "/titulos/3"%}
+                <a href="{% url 'historiasflu' %}">Historias</a>
+            
+            {% else %}
+                <a href="{% url 'historiasva' %}">Historias</a>
+
+            {% endif %}
 
             <a href="{% url 'index' %}">Voltar</a>
         </div>
