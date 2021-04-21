@@ -4,13 +4,13 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Postagem</title>
+    <title>Faça Comentários</title>
     {% bootstrap_css %}
 
 </head>
 <body>
+    <h2>Faça Comentários</h2>
     <div class="container">
-        <h1>Postagem</h1>
         {% bootstrap_messages %}
 
         <form action="{% url 'postagem' %}" method="post" class="form" autocomplete="off" enctype="multipart/form-data">
@@ -18,12 +18,12 @@
             {% bootstrap_form form %}
             
             {% buttons %}
-                <button type="submit" class="btn btn-primary">comentar</button>
+                <button type="submit" class="btn btn-primary">Enviar</button>
             {% endbuttons %}
         </form>
     </div>
 
 {% bootstrap_javascript jquery='full' %}
-<a href="{% url 'index' %}">Voltar</a>
+<a href="{% url 'index' %}">Pagina Inicial</a>
 </body>
 </html>

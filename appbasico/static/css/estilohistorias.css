@@ -1,0 +1,20 @@
+#interface-historias{
+    margin:auto ;
+    width: 900px;
+    height: 400px;
+    border: 1px solid black;
+}
+#interface-historias a{
+    text-decoration:none;
+    color: white;
+}
+
+#botao{
+    width: 80px;
+    margin:10px;
+    margin-top: 20px;
+    padding: 0px;
+    border: 1px solid black;
+    text-align: center;
+    background-color: black;
+}

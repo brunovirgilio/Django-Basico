@@ -17,24 +17,21 @@
             <img id='foto-torcida' src='{{ titulo.imagem.url }}'/>
         </div>
         {% endblock torcida %}
-        <div id='botao'>
-            {% if request.get_full_path == "/titulos/1" %}
-                <a href="{% url 'historias' %}">Historias</a>
-        
-            {% elif request.get_full_path == "/titulos/2"%}
-                <a href="{% url 'historiasfla' %}">Historias</a>
-                
-            {% elif request.get_full_path == "/titulos/3"%}
-                <a href="{% url 'historiasflu' %}">Historias</a>
+        {% if request.get_full_path == "/titulos/1" %}
+            <a id='botao' href="{% url 'historias' %}">Comentários</a><br><br>
+    
+        {% elif request.get_full_path == "/titulos/2"%}
+            <a id='botao' href="{% url 'historiasfla' %}">Comentários</a><br><br>
             
-            {% else %}
-                <a href="{% url 'historiasva' %}">Historias</a>
+        {% elif request.get_full_path == "/titulos/3"%}
+            <a id='botao' href="{% url 'historiasflu' %}">Comentários</a><br><br>
+        
+        {% else %}
+            <a id='botao' href="{% url 'historiasva' %}">Comentários</a><br><br>
 
-            {% endif %}
+        {% endif %}
 
-            <a href="{% url 'index' %}">Voltar</a>
-        </div>
-
+        <a id='botao' href="{% url 'index' %}">Voltar</a>
     </section>    
 </body>
 </html>
