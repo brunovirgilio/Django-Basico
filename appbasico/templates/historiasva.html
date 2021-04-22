@@ -3,16 +3,28 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-
-    <title>Historias</title>
+    <link rel="stylesheet" href="{% static 'css/estilohistorias.css' %}"/>
+    <title>Comentários</title>
 </head>
 <body>
-    {% for x in comentario %}
-        <p>{{ x.nome }}</p>
-        <p>{{ x.post }}</p>
-    {% endfor %}
+    <section id='interface-historias'>
+        <table id='tabela'>
+        <tr id='titulo'>
+            <td>NOME</td>
+            <td>COMENTÁRIO</td>
+        </tr>
+        {% for x in comentario %}
+            <tr>
+                <td>{{ x.nome }}</td>
 
-    <a href="{% url 'postagem' %}">Escreva sua historia</a>
-    <a href="{% url 'index' %}">Voltar</a>
+                <td>{{ x.post }}</td>
+            </tr>
+        {% endfor %}
+        </table>
+        <div id='botoes'>
+        <a id='botao' href="{% url 'postagem' %}">Faça comentários</a><br><br>
+        <a id='botao' href="{% url 'index' %}">Página Inicial</a>  
+        </div>
+    </section>
 </body>
 </html>

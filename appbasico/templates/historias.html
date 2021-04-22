@@ -8,10 +8,10 @@
 </head>
 <body>
     <section id='interface-historias'>
-        <table>
-        <tr>
-            <td>Nome</td>
-            <td>Comentário</td>
+        <table id='tabela'>
+        <tr id='titulo'>
+            <td>NOME</td>
+            <td>COMENTÁRIO</td>
         </tr>
         {% for x in comentario %}
             <tr>
@@ -21,8 +21,10 @@
             </tr>
         {% endfor %}
         </table>
+        <div id='botoes'>
         <a id='botao' href="{% url 'postagem' %}">Faça comentários</a><br><br>
-        <a id='botao' href="{% url 'index' %}">Voltar</a>  
+        <a id='botao' href="{% url 'index' %}">Página Inicial</a>  
+        </div>
     </section>
 </body>
 </html>
