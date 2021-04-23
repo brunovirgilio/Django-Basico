@@ -4,26 +4,29 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/estilopostagem.css' %}"/>
     <title>Faça Comentários</title>
     {% bootstrap_css %}
 
 </head>
 <body>
-    <h2>Faça Comentários</h2>
-    <div class="container">
-        {% bootstrap_messages %}
+    <section id='interface-postagem'>
+        <h2>Comentários</h2>
+        <div class="container">
+            {% bootstrap_messages %}
 
-        <form action="{% url 'postagem' %}" method="post" class="form" autocomplete="off" enctype="multipart/form-data">
-            {% csrf_token %}
-            {% bootstrap_form form %}
-            
-            {% buttons %}
-                <button type="submit" class="btn btn-primary">Enviar</button>
-            {% endbuttons %}
-        </form>
-    </div>
+            <form action="{% url 'postagem' %}" method="post" class="form" autocomplete="off" enctype="multipart/form-data">
+                {% csrf_token %}
+                {% bootstrap_form form %}
+                
+                {% buttons %}
+                    <button type="submit" class="btn btn-dark">Enviar</button>
+                {% endbuttons %}
+            </form>
+            <a class="btn btn-dark" href="{% url 'index' %}">Pagina Inicial</a>
+        </div>
 
-{% bootstrap_javascript jquery='full' %}
-<a href="{% url 'index' %}">Pagina Inicial</a>
+    {% bootstrap_javascript jquery='full' %}
+    </section>
 </body>
 </html>
